@@ -1,0 +1,35 @@
+{
+	"name": "redisgraph.ts",
+	"version": "1.1.4",
+	"description": "Connect to RedisGraph 1.0.0 and up from TypeScript",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"files": [
+		"dist"
+	],
+	"scripts": {
+		"prepare": "tsc",
+		"test": "ts-mocha __tests__/**/*.spec.ts --exit"
+	},
+	"author": "RedisLabs",
+	"contributors": [
+		"Denis Carriere <denis@eosnation.io>"
+	],
+	"license": "BSD 3",
+	"repository": {
+		"type": "git",
+		"url": "git://github.com/eosnationftw/redisgraph.ts.git"
+	},
+	"dependencies": {
+		"redis": "*"
+	},
+	"devDependencies": {
+		"@types/mocha": "*",
+		"@types/node": "*",
+		"@types/redis": "*",
+		"load-json-file": "*",
+		"mocha": "*",
+		"ts-mocha": "^6.0.0",
+		"typescript": "*"
+	}
+}
