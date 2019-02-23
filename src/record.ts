@@ -1,4 +1,5 @@
-import { Header, Values } from "./types";
+type Header = string[]
+type Values = (number|string)[]
 
 /**
  * Hold a query record

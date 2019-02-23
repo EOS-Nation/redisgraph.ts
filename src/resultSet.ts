@@ -1,6 +1,7 @@
 import { Statistics } from "./statistics"
 import { Record } from "./record";
-import { Header } from "./types";
+
+type Header = string[]
 
 /**
  * Hold a query result
