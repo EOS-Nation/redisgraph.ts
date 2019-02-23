@@ -26,7 +26,7 @@ $ npm install --save git+ssh://git@github.com:eosnationftw/redisgraph.ts.git
 # Example: Using the JavaScript Client
 
 ```javascript
-import { RedisGraph } from "redisgraph.js";
+import { RedisGraph } from "redisgraph.ts";
 
 (async () => {
 	const graph = new RedisGraph("social");
