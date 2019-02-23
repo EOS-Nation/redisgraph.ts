@@ -1,0 +1,2 @@
+# redisgraph.ts
+RedisGraph.ts
