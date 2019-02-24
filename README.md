@@ -1,13 +1,8 @@
-[![license](https://img.shields.io/github/license/RedisGraph/redisgraph.js.svg)](https://github.com/RedisGraph/redisgraph.js)
-[![CircleCI](https://circleci.com/gh/RedisGraph/redisgraph.js/tree/master.svg?style=svg)](https://circleci.com/gh/RedisGraph/redisgraph.js/tree/master)
-[![npm version](https://badge.fury.io/js/redisgraph.js.svg)](https://badge.fury.io/js/redisgraph.js)
-[![GitHub issues](https://img.shields.io/github/release/RedisGraph/redisgraph.js.svg)](https://github.com/RedisGraph/redisgraph.js/releases/latest)
-[![Codecov](https://codecov.io/gh/RedisGraph/redisgraph.js/branch/master/graph/badge.svg)](https://codecov.io/gh/RedisGraph/redisgraph.js)
-
 # redisgraph.ts
 
-[RedisGraph](https://github.com/RedisLabsModules/redis-graph/) JavaScript Client
+> TypeScript implementation of [redisgraph.js](https://github.com/RedisGraph/redisgraph.js).
 
+[RedisGraph](https://github.com/RedisLabsModules/redis-graph/) TypeScript Client
 
 # Installation
 
@@ -15,17 +10,16 @@ Installation is done using the
 [`npm install` command](https://docs.npmjs.com/getting-started/installing-npm-packages-locally):
 
 ```bash
-$ npm install --save git+ssh://git@github.com:eosnationftw/redisgraph.ts.git
+$ npm install --save redisgraph.ts
 ```
 
 ## Overview
 
 ### Official Releases
 
+# Example: Using the Typescript Client
 
-# Example: Using the JavaScript Client
-
-```javascript
+```typescript
 import { RedisGraph } from "redisgraph.ts";
 
 (async () => {

@@ -8,7 +8,7 @@
 		"dist"
 	],
 	"scripts": {
-		"prepare": "tsc",
+		"prepublishOnly": "tsc",
 		"test": "ts-mocha __tests__/**/*.spec.ts --exit"
 	},
 	"author": "RedisLabs",
