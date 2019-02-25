@@ -1,5 +1,5 @@
 type Header = string[]
-type Values = (number|string)[]
+type Values = any[]
 
 /**
  * Hold a query record
@@ -13,7 +13,7 @@ export class Record {
 		this._values = values;
 	}
 
-	get(key: string|number): string|number {
+	get<T = string|number>(key: string|number): T {
 		let index: string|number = key;
 		if (typeof key === "string") {
 			index = this._header.indexOf(key);
