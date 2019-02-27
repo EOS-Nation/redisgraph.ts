@@ -3,6 +3,16 @@ import redis from "redis";
 import { Label } from "../src/label"
 import { RedisGraph } from "../src/redisGraph";
 
+describe('RedisAPI Test', () =>{
+	const api = new RedisGraph("redis");
+
+	it("test get & set", async () => {
+		assert.equal(await api.set("foo", "bar"), "OK");
+		assert.equal(await api.get("foo"), "bar");
+		assert.equal(await api.get("abc"), null);
+	});
+});
+
 describe('RedisGraphAPI Test', () =>{
 	const api = new RedisGraph("social");
 
