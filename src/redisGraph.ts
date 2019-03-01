@@ -28,58 +28,6 @@ export class RedisGraph {
 	}
 
 	/**
-	 * SET & SETEX
-	 *
-	 * Set key to hold the string value.
-	 * If key already holds a value, it is overwritten, regardless of its type.
-	 * Any previous time to live associated with the key is discarded on successful SET operation.
-	 *
-	 * https://redis.io/commands/set
-	 * https://redis.io/commands/setex
-	 *
-	 * @param {string} key key
-	 * @param {string} value value
-	 * @param {number} [expiration] expiration in seconds
-	 * @return {string|null} OK if SET was executed correctly.
-	 * @example
-	 *
-	 * graph.set("foo", "bar")
-	 * graph.set("foo", "bar", 120) // with expiration
-	 */
-	async set(key: string, value: string, expiration?: number): Promise<string> {
-		try {
-			if (expiration) return await this._sendCommand("SETEX", [key, expiration, value]);
-			return await this._sendCommand("SET", [key, value]);
-		} catch (e) {
-			throw new Error(e)
-		}
-	}
-
-	/**
-	 * GET
-	 *
-	 * Get the value of key.
-	 * If the key does not exist the special value nil is returned.
-	 * An error is returned if the value stored at key is not a string,
-	 * because GET only handles string values.
-	 *
-	 * https://redis.io/commands/get
-	 *
-	 * @param {string} key key
-	 * @return {string|null} the value of key, or nil when key does not exist.
-	 * @example
-	 *
-	 * graph.set("foo");
-	 */
-	async get(key: string): Promise<string|null> {
-		try {
-			return await this._sendCommand("GET", [key]);
-		} catch (e) {
-			throw new Error(e)
-		}
-	}
-
-	/**
 	 * GRAPH.QUERY
 	 *
 	 * Executes the given query against a specified graph.

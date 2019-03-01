@@ -1,6 +1,6 @@
 {
 	"name": "redisgraph.ts",
-	"version": "1.2.0",
+	"version": "1.2.1",
 	"description": "Connect to RedisGraph 1.0.0 and up from TypeScript",
 	"main": "dist/index.js",
 	"types": "dist/index.d.ts",
